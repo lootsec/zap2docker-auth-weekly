@@ -23,7 +23,7 @@ def zap_started(zap, target):
             target = target[0:target.index('/', 8)+1]
 
         scan_policy = 'Default Policy'
-        zap.ascan.update_scan_policy(scanpolicyname=scan_policy , attackstrength="LOW")
+        zap.ascan.update_scan_policy(scanpolicyname=scan_policy , attackstrength="HIGH")
         
         auth = zap_auth.ZapAuth(config)
         auth.authenticate(zap, target)
